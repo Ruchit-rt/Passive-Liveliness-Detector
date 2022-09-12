@@ -53,4 +53,4 @@ was checked. (notes.txt)
 
 __This project has taught me technicals such as image processing and AI/ML using CV2, Python, Sklearn, Tensorflow/Keras, Docker as well as working in a company structure and getting hands on industry experience__
 
-I would like to thank __Dr. Maria Valera-Espina__,__Som Raj__, __Amit Jain__, __Abhishek Agarwal__ and the entire team at __ElixirCT__ for their guidance and support.
+I would like to thank __Dr. Maria Valera-Espina__,__Som Raj__, __Amit Jain__, __Devendra Kumar__ ,__Abhishek Agarwal__ and the entire team at __ElixirCT__ for their guidance and support.
