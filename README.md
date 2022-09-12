@@ -44,11 +44,13 @@ was checked. (notes.txt)
 - Finally a containerised (docker image) pipeline was developed that used an external API to test the model on incoming images. This has been put into place using the detect and test_detect python files. 
 - Results are stored under publish folder
 
-## Misc - Whats' next?
-- Before applying the ann approach, I explored other approaches such as **Monocular depth estimation** and **Multiple image disparity map** generation (check disparity folder) but this seemed to be the most fruitful approach. 
+## Misc - What's next?
+- Before applying the ANN approach, I explored other approaches such as **Monocular depth estimation** and **Multiple image disparity map** generation (check disparity folder) but this seemed to be the most fruitful approach. 
 - Code to generate fake datasets etc. can be found outside the liveliness folder
 - **JPGvsPNG** : while JPG images are lighter it seems there is very slight/minial loss in accuracy when using jpg for training data. Preffered form remains to be PNG images
 - This repo does not hold the entire codebase and other plots (from differnet trainings). These can be provided on request. 
 - The model is still improving. Currently progress depends on better input images. Work is being done to enhance input data quality. 
 
-__This project has taught me technicals such as image processing and AI/ML using CV2, Python, Sklearn, Tensorflow/Keras,Docker as well as working in a company structure and getting hands on industry experience__
+__This project has taught me technicals such as image processing and AI/ML using CV2, Python, Sklearn, Tensorflow/Keras, Docker as well as working in a company structure and getting hands on industry experience__
+
+__I would like to thank Som Raj, Amit jain, Abhishek Agarwal and the entire team at ElixirCT for their guidance and support.__
