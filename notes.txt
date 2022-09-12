@@ -1,0 +1,80 @@
+
+14 - Nokia Iphone trained one 97% real,90% fake 
+15 - 85 epochs, 8 BS - real 97%, fake 28%
+17 - 100 epochs, 10 BS - real 90%, fake 54%
+Note: 100 epochs, 8BS - real , fake does not run
+
+8 AUG: (testing)
+Model 14 - old model 8BS, 100 epochs  real 97.68637532133675, fake 17%
+Model 18 - 125 epochs,32BS real 85%, fake 60%
+Model 19 - 200 epochs,64BS REAL 80%,FAKE75%
+Model 20 - 300 epochs,32 BS REAL 93%,fake 63.55
+Model 21 - 300 epochs, 64BS REAL 90.74%,FAKE 72%
+Model 22 - 350 epochs, 64BS REAL 81%,FAKE 76%
+Model 23 - 350 epochs, 32BS REAL 76.3%,FAKE 77%
+Model 24 (rerun for randomisation)- 350 epochs, 64BS REAL 96.14%,FAKE 60%
+Model 25 (24 failed cases added, 2 real cases, 91 fake cases) - 
+	1) 97 % real, 78.41% fake (Model 24 dataset)      - 400 images
+	2) 98.44% real 				 (Model 25 new dataset) - 217 images
+AUG 9ths
+Model 26 (64 BS, Epochs 350) FACE DETECTOR CHANGES - 
+        		1) caffe model detector
+				2) face_recogntion detector 
+		test_data_4Aug - real 91.6%, fake 90% (poor_detections 0)
+		test_data_8Aug - real 95.75% , fake 82.58% (poor_detections 0)
+Model 26 above with threshold fake_ratio: 150
+			test_data_8Aug - real 99% (97 + 2), 
+									fake 44% (37%threshold drop)
+Model 26 above with threshold fake_ratio: 50 
+			test_data_8Aug - real 98.2% (95.75 + 2.4), 
+									fake 52 % (29% threshold drop)
+Model 27 (Model 26 fail cases 64BS, 350Epoch)  THRESHOLD
+			test_data_9Aug - real (90.6% + 8.48% = 99% total)
+									 fake (44.62% , 39.71% threshol drop)
+Model 28 (Model 27 failed cases - iphone screen taken from Abhishek phone)
+			64BS, 350epoch
+		a)	test_with_9Aug_old_data- real 83.715 + 13.76 = 97.5 %
+												fake 93 % , 6.7 %threshold drop
+Model 29 (Model 28 fail cases, 500 EPOCHS, 64BS)
+		test_data_9Aug_old_data - real 91.72% + 5.97% = 97.7%  
+											  fake 96.487% + 3% threshold drop
+		test_data_10Aug (1100 images)
+						- real 91% + 6.4 % = 97.6%  (2.4 % error)						- fake 50% + 22 % threshold drop 
+Model 30 (Model 29 fail cases, 500 EPOCHS, 64BS) + 500 EPOCH 
+	RERUN FROM WHERE MODEL 29 LEFT
+		test_data_10Aug (1100 images)
+					- real 93 % + 5 % = 98%
+					- fake 87% + 10% threshold drops 
+		test_data_11Aug 
+						- real 93 + 3 = 96.89 %
+Model 31 (Model 29 fail cases, 500 EPOCHS, 128BS) + 500 EPOCH 
+	RERUN FROM WHERE MODEL 29 LEFT
+\
+real, fake
+38 —>  95, 65
+39 —> 94, 60
+40 —> 97.8 (png real), 97.6 (jpg real) , 41
+41 —> gone case
+42 —> 98.8, 7.7
+43 —> 93.46, 52.2
+50,51 --> 100, 0.5 
+
+SHIFTED TO COLLAB 17 Aug:
+
+model 33 - used tutorial style functions , 1000 EPOCHS, 64 BS, 
+
+model 34 - used opt from pyimage, 1000 EPOCHS, 128 BS
+		dat reaa 16 Aug -l 
+model 35INIT_LR = 1e-4 BS = 64 EPOCHS = 800. testing was poor 70%
+ 	 	- 
+model 36 INIT_LR = 1e-4 BS = 128 EPOCHS = 500 testing was better near 88% now
+model 37 INIT_LR = 1e-4 BS = 128 EPOCHS = 750 (jpg) - COLLAB
+				- test 16 Aug data - real 80 + 10 = 90% (doesnt matter if tested againt jpg or png)
+model 38 INIT_LR = 1e-4 BS = 128 EPOCHS = 750 (png) - MAC
+				- test 16 Aug data - real 89 + 6 = 95 % (doesnt matter if tested againt jpg or png)
+											fake 65 + 18% dropouts
+model 39 - epochs 1000, BS 165 
+				- test results same as above 
+model 40 INIT_LR = 1e-4 BS = 128 EPOCHS = 750 (jpg) - MAC
+				- test 16 Aug data - real 92 + 6 = 98 % (jpg one seems to be a btter trained model)					fake 41% + 26 %
+
